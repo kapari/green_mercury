@@ -1,14 +1,38 @@
+@import url('http://codescouts.org/css/style.css');
+
+/* GLOBAL IS MOBILE */
+
 $green: #4c8f85;
 $mercury: #d1d1d1;
 
+body {
+	background: inherit;
+}
+
+.container {
+	width: 100%;
+}
+
 .green {
-  color: $green;
+	color: $green;
 }
 
 .mercury {
-  color: $mercury;
+	color: $mercury;
 }
 
 .concepts-list {
-  margin-top: 20px;
+	margin-top: 20px;
 }
+
+footer, #footer {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#footer img {
+	height: 3em;
+	width: auto;
+}
+
+/* WIDE SCREEN */ 

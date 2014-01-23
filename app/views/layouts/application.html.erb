@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<div id="wrapper">
+
 <header>
   <div class="row-fluid">
     <div class="span4"></div>
@@ -35,6 +37,8 @@
     </div>
   </div>
 </header>
+
+<div id="main"> <!-- to match existing css -->
 
 <div style="display:none;" id="signIn">
   <h1>Sign Up / Sign In</h1>
@@ -197,9 +201,20 @@
 
   </div>
 </div>
-<footer>
-  Code Scouts is sponsored by <%= link_to image_tag(@sponsor[:logo]), @sponsor[:link] %>
-</footer>
+
+</div> <!-- #main -->
+
+<div id="footer"> <!-- Wrapped in div with id to accomodate original css file -->
+  <footer>
+    &copy; 2013 Code Scouts
+    - <a href="press.html">Press / Logos</a>
+    - <a href="codeofconduct.html">Code of Conduct</a>
+    - <a href="terms.html">Terms &amp; Conditions</a>
+    - <a href="mailto:adventure@codescouts.org">Email Us</a>
+    - <a href="http://twitter.com/codescouts">@codescouts</a><br/>
+    Code Scouts is sponsored by <%= link_to image_tag(@sponsor[:logo]), @sponsor[:link] %>
+  </footer>
+</div><!-- #footer -->
 <script>
   if (typeof window.janrain !== 'object') window.janrain = {};
   if (typeof window.janrain.settings !== 'object') window.janrain.settings = {};
@@ -222,5 +237,8 @@
     var freshAccessToken = '<%= @fresh_access_token %>';
   <% end %>
 </script>
+
+</div> <!-- wrapper -->
+
 </body>
 </html>
